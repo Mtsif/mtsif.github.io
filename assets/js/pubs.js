@@ -18,16 +18,17 @@
 
       const title = document.createElement('div');
       title.className = 'pub-title';
-      if (p.url) {
-        const a = document.createElement('a');
-        a.href = p.url;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.textContent = p.title;
-        title.appendChild(a);
-      } else {
-        title.textContent = p.title;
-      }
+      title.textContent = p.title;
+      // if (p.url) {
+      //   const a = document.createElement('a');
+      //   a.href = p.url;
+      //   a.target = '_blank';
+      //   a.rel = 'noopener';
+      //   a.textContent = p.title;
+      //   title.appendChild(a);
+      // } else {
+      //   title.textContent = p.title;
+      // }
 
       const meta = document.createElement('div');
       meta.className = 'pub-meta';
