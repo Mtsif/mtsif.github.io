@@ -42,8 +42,8 @@
         : '';
 
       const doiLink = p.doi
-        ? ` · <a href="${p.url || ('https://doi.org/' + p.doi)}" target="_blank" rel="noopener">DOI</a>`
-        : '';
+      ? ` <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener" class="doi-button">DOI</a>`
+      : '';
 
       meta.innerHTML = `${authors}. ${journalLine}.${quartileBadge}${doiLink}`;
 
