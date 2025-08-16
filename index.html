@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Margaritis Tsifintaris — Molecular Biologist • Geneticist • Bioinformatician</title>
+  <meta name="description" content="Academic portfolio of Your Name — molecular biologist, geneticist, and bioinformatician.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <meta name="theme-color" content="#0b1020">
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/sidebar.css">
+</head>
+<body class="bg-body text-body">
+  <!-- Mobile top bar -->
+  <header class="topbar d-lg-none">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="brand d-flex align-items-center gap-2" href="#home">
+        <img src="assets/img/logo.svg" width="28" height="28" alt="Logo">
+        <span>Margaritis Tsifintaris</span>
+      </a>
+      <button class="btn btn-outline-light btn-sm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-label="Toggle menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Sidebar for desktop -->
+  <aside class="sidebar d-none d-lg-flex flex-column align-items-center p-4">
+    <img src="assets/img/profile.png" class="avatar shadow" alt="Your photo">
+    <h1 class="h4 mt-3 mb-1 text-center">Margaritis Tsifintaris</h1>
+    <div class="text-muted small text-center mb-3">Molecular Biologist · Geneticist · Bioinformatician</div>
+    <div class="social social-disc mb-3">
+      <a class="icon-circle" href="https://github.com/Mtsif" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+      <a class="icon-circle" href="https://scholar.google.com/citations?user=QpGOFE0AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+        <i class="bi bi-mortarboard"></i>
+      </a>
+      <a class="icon-circle" href="https://www.linkedin.com/in/margaritis-tsifintaris-a7162a23b/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a class="icon-circle orcid"
+        href="https://orcid.org/0000-0001-8603-3767"
+        target="_blank" rel="noopener"
+        aria-label="ORCID" title="ORCID">
+        <span class="id-glyph" aria-hidden="true">iD</span>
+        <span class="visually-hidden">ORCID</span> <!-- Bootstrap 5 has this class -->
+      </a>
+    </div>
+    <nav class="nav flex-column w-100">
+      <a class="nav-link" href="#home"><i class="bi bi-house"></i> <span>Home</span></a>
+      <a class="nav-link" href="#about"><i class="bi bi-person"></i> <span>About</span></a>
+      <a class="nav-link" href="#research"><i class="bi bi-diagram-3"></i> <span>Research</span></a>
+      <a class="nav-link" href="#publications"><i class="bi bi-journal"></i> <span>Publications</span></a>
+      <a class="nav-link" href="#projects"><i class="bi bi-hammer"></i> <span>Projects</span></a>
+      <a class="nav-link" href="#teaching"><i class="bi bi-easel"></i> <span>Teaching</span></a>
+      <a class="nav-link" href="#contact"><i class="bi bi-send"></i> <span>Contact</span></a>
+    </nav>
+    <div class="mt-auto small text-muted">© <span id="year"></span></div>
+  </aside>
+
+  <!-- Offcanvas (mobile menu) -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNav">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex align-items-center gap-3 mb-3">
+        <img src="assets/img/profile.jpg" class="avatar avatar-sm" alt="Your photo">
+        <div>
+          <div class="fw-bold">Your Name</div>
+          <div class="small text-muted">Bioinformatician</div>
+        </div>
+      </div>
+      <a class="nav-link" href="#home" data-bs-dismiss="offcanvas"><i class="bi bi-house"></i> Home</a>
+      <a class="nav-link" href="#about" data-bs-dismiss="offcanvas"><i class="bi bi-person"></i> About</a>
+      <a class="nav-link" href="#research" data-bs-dismiss="offcanvas"><i class="bi bi-diagram-3"></i> Research</a>
+      <a class="nav-link" href="#publications" data-bs-dismiss="offcanvas"><i class="bi bi-journal"></i> Publications</a>
+      <a class="nav-link" href="#projects" data-bs-dismiss="offcanvas"><i class="bi bi-hammer"></i> Projects</a>
+      <a class="nav-link" href="#teaching" data-bs-dismiss="offcanvas"><i class="bi bi-easel"></i> Teaching</a>
+      <a class="nav-link" href="#contact" data-bs-dismiss="offcanvas"><i class="bi bi-send"></i> Contact</a>
+      <hr>
+      <a class="nav-link" href="cv/YourName_CV.pdf"><i class="bi bi-file-earmark-text"></i> CV</a>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <!-- Hero -->
+    <!-- HERO — full-width research image, no text -->
+    <section id="home" class="hero" aria-label="Featured research image">
+      <div class="hero-scrim" aria-hidden="true"></div>
+    </section>
+
+    <main class="container content">
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="section-header">
+          <h2>About</h2>
+        <!-- </div>
+        <p>I am a molecular biologist and geneticist working as a bioinformatician. I develop pipelines for RNA‑seq and single‑cell data, perform quality control and metadata harmonization, and collaborate closely with wet‑lab teams to translate data into biological insight.</p>
+        <p>Focus areas: differential expression, gene regulatory networks, variant interpretation, and reproducible workflows in <code>Snakemake</code>, <code>Nextflow</code>, <code>R</code>, and <code>Python</code>.</p>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <ul class="list-unstyled small">
+              <li><strong>Affiliation:</strong> Your Institution</li>
+              <li><strong>Location:</strong> City, Country</li>
+              <li><strong>Email:</strong> <a href="mailto:you@institute.edu">you@institute.edu</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled small">
+              <li><strong>Skills:</strong> RNA‑seq, scRNA‑seq, QC/QA, NGS, Snakemake, Nextflow</li>
+              <li><strong>Tools:</strong> R, Python, Git, Docker/Podman, MultiQC</li>
+            </ul>
+          </div>
+        </div> -->
+      </section>
+
+      <!-- Research -->
+      <section id="research" class="section">
+        <div class="section-header">
+          <h2>Research Interests</h2>
+        <!-- </div>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="card-soft p-3 h-100">
+              <h5>Transcriptomics</h5>
+              <p class="mb-0">Bulk & single‑cell RNA‑seq, spatial omics, differential expression, trajectory inference.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-soft p-3 h-100">
+              <h5>Data Integration</h5>
+              <p class="mb-0">Batch correction, cross‑study harmonization, ontology mapping, FAIR metadata.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-soft p-3 h-100">
+              <h5>Functional Genomics</h5>
+              <p class="mb-0">Variant interpretation, gene regulatory networks, pathway analysis.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-soft p-3 h-100">
+              <h5>Reproducible Science</h5>
+              <p class="mb-0">Snakemake/Nextflow pipelines, containers, CI, literate programming.</p>
+            </div>
+          </div>
+        </div> -->
+      </section>
+
+      <!-- Publications -->
+      <section id="publications" class="section">
+        <div class="section-header">
+          <h2>Selected Publications</h2>
+        </div>
+
+        <ol id="pub-list" class="pubs">
+          <li class="text-muted">Loading publications…</li>
+        </ol>
+
+        <noscript>
+          <p class="text-muted">Enable JavaScript to see the publications list.</p>
+        </noscript>
+      </section>
+
+      <!-- Projects -->
+      <!-- <section id="projects" class="section">
+        <div class="section-header">
+          <h2>Highlighted Projects</h2>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <article class="card-soft p-3 h-100">
+              <h5 class="mb-1">rnaflow</h5>
+              <p class="mb-2">Nextflow pipeline for bulk RNA‑seq (QC → quantification → DE). CI, containers, MultiQC.</p>
+              <p class="small mb-0"><a href="https://github.com/your-username/rnaflow" class="link-body-emphasis">GitHub</a></p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="card-soft p-3 h-100">
+              <h5 class="mb-1">sc-integrator</h5>
+              <p class="mb-2">Benchmarking toolkit for single‑cell integration and batch correction with tidy APIs.</p>
+              <p class="small mb-0"><a href="https://github.com/your-username/sc-integrator" class="link-body-emphasis">GitHub</a></p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="card-soft p-3 h-100">
+              <h5 class="mb-1">metaQC</h5>
+              <p class="mb-2">Metadata harmonization utilities for GEO/SRA studies. JSON‑Schema validation.</p>
+              <p class="small mb-0"><a href="https://github.com/your-username/metaQC" class="link-body-emphasis">GitHub</a></p>
+            </article>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Teaching -->
+      <!-- <section id="teaching" class="section">
+        <div class="section-header">
+          <h2>Teaching & Talks</h2>
+        </div>
+        <ul class="list-unstyled">
+          <li>Guest Lecture — <em>Reproducible RNA‑seq</em>, Course/Dept, 2025. <a href="#">Slides</a></li>
+          <li>Workshop — <em>Single‑cell 101</em>, 2024. <a href="#">Materials</a></li>
+          <li>TA — <em>Intro to Bioinformatics</em>, 2023.</li>
+        </ul>
+      </section> -->
+
+      <!-- Contact -->
+      <!-- <section id="contact" class="section">
+        <div class="section-header">
+          <h2>Contact</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card-soft p-3 h-100">
+              <h5 class="mb-3">Get in touch</h5>
+              <ul class="list-unstyled small">
+                <li>Email: <a href="mailto:you@institute.edu">you@institute.edu</a></li>
+                <li>GitHub: <a href="https://github.com/your-username">@your-username</a></li>
+                <li>ORCID: <a href="#">0000-0000-0000-0000</a></li>
+                <li>Google Scholar: <a href="#">Profile</a></li>
+                <li>Location: City, Country</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-soft p-3 h-100">
+              <h5 class="mb-3">Availability</h5>
+              <p class="mb-2">Open to collaborations, consulting, and invited talks.</p>
+              <p class="small text-muted mb-0">Last updated: <span id="last-updated"></span></p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </main>
+
+    <footer class="py-4 border-top">
+      <div class="container small text-center text-muted">
+        © <span id="year2"></span> Margaritis Tsifintaris. Built with Bootstrap 5 and hosted on GitHub Pages.
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/pubs.js"></script>
+  <script src="assets/js/sidebar.js"></script>
+</body>
+</html>

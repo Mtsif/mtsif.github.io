@@ -1,0 +1,190 @@
+/* ---------- base ---------- */
+:root {
+  --bg: #0b1020;
+  --pane: #05080f;
+  --muted: #d0d4e0;
+  --text: #fafcff;
+  --accent: #6ea8fe;
+  --accent2: #b089f0;
+
+  /* height of the mobile top bar (only shows < lg) */
+  --topbar-h: 0px;
+}
+
+@media (max-width: 991.98px){
+  :root { --topbar-h: 56px; }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f8ff;
+    --pane: #05080f;
+    --muted: #4b4f7a;
+    --text: #141a2d;
+    --accent: #2f5aff;
+    --accent2: #7b42ff;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;  /* << important so the hero truly reaches edges */
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.bg-body { background: var(--bg) !important; color: var(--text) !important; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 1030;
+  background: linear-gradient(90deg, rgba(26,34,68,.97), rgba(26,34,68,.92));
+  padding: .5rem 1rem;
+}
+.topbar .brand { color: #fff; text-decoration: none; font-weight: 700; }
+
+/* -------- Sidebar -------- */
+.sidebar {
+  position: fixed; top: 0; left: 0; height: 100vh; width: 280px;
+  background: var(--pane);
+  border-right: 1px solid rgba(255,255,255,.08);
+  color: var(--text);
+}
+.sidebar .avatar {
+  width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+  border: 2px solid rgba(255,255,255,.25);
+}
+.sidebar .avatar-sm { width: 56px; height: 56px; border-radius: 50%; }
+
+/* Stronger contrast for headings and small text in the sidebar */
+.sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6 {
+  color: #ffffff;
+}
+.sidebar .small, .sidebar small { color: #e8ecf7; }
+
+/* Make icons bright to match text */
+.sidebar i, .sidebar .bi { color: #ffffff; opacity: .95; }
+.sidebar a i:hover, .sidebar a .bi:hover { opacity: 1; }
+
+/* Make subtitle under the name brighter */
+.sidebar .small,
+.sidebar small,
+.sidebar .subtitle {
+  color: #e8ecf7 !important; /* light grey, readable on dark bg */
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Force brighter sidebar menu text + base left bar */
+.sidebar .nav-link {
+  color: #ffffff;
+  opacity: 1;
+  font-weight: 600;
+  letter-spacing: .1px;
+  border-left: 3px solid transparent;   /* <— add this */
+  padding: .6rem 1rem;
+  margin: .1rem .5rem;
+  border-radius: .4rem;
+}
+
+.sidebar .nav-link:hover {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.sidebar .nav-link.active {
+  color: var(--accent);
+  border-left-color: var(--accent);      /* shows now */
+  background: rgba(110, 168, 254, 0.22);
+}
+
+
+/* -------- Main content -------- */
+.main { margin-left: 0; }
+@media (min-width: 992px){ .main { margin-left: 280px; } }
+
+
+/* --- HERO (full screen image) --- */
+/* Replace your existing .hero block with this, and DELETE the 45vh @media rule */
+.hero{
+  position: relative;
+  /* full viewport height minus the mobile topbar if present */
+  height: calc(100dvh - var(--topbar-h));
+  /* fallbacks for iOS/Safari quirks */
+  height: calc(100svh - var(--topbar-h));
+
+  margin: 0;
+  border: 0;
+  background-image: url('../img/hero.png');   /* your file */
+  background-position: center right;          /* keep DNA visible */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero .hero-scrim{
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.32) 85%);
+}
+
+/* Slightly tighter spacing before “About” so it sits right below the hero */
+.content { padding-top: 1rem; }  /* was 2rem */
+
+
+/* round social icons like the screenshot */
+.social-disc { display:flex; gap:16px; }
+
+.icon-circle{
+  --size:56px;
+  width:var(--size); height:var(--size);
+  display:inline-flex; align-items:center; justify-content:center;
+  border-radius:999px;
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  color:#ffffff;                  /* icon color */
+  text-decoration:none;
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .15s ease, color .2s ease;
+}
+.icon-circle i{ font-size:20px; line-height:1; }
+
+/* hover/focus glow */
+.icon-circle:hover{
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.35);
+  box-shadow: 0 6px 18px rgba(0,0,0,.35), 0 0 0 4px rgba(110,168,254,.18);
+  transform: translateY(-2px);
+  color:#ffffff;
+}
+.icon-circle:focus-visible{
+  outline:none;
+  box-shadow: 0 0 0 3px var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ORCID brand option: make the glyph green like official branding */
+.brand-orcid{ color:#A6CE39; }        /* comment this line to make it white like others */
+/* If you keep it green, you can reduce the hover glow a bit: */
+.brand-orcid:hover{ box-shadow: 0 6px 18px rgba(0,0,0,.35), 0 0 0 4px rgba(166,206,57,.25); }
+
+
+
+
+
+.badge.bg-accent { background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+.badge.bg-accent-2 { background: linear-gradient(90deg, var(--accent2), var(--accent)); }
+
+.content { padding-top: 2rem; padding-bottom: 3rem; }
+.section { margin: 2rem 0; }
+.section-header h2 { font-weight: 800; margin-bottom: .5rem; }
+
+.card-soft {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+}
+.pubs { padding-left: 1.25rem; }
+.pub-title { font-weight: 600; }
+.pub-meta { color: var(--muted); }
+
+footer { color: var(--muted); }
+
