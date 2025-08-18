@@ -130,8 +130,6 @@ html, body {
 /* Slightly tighter spacing before “About” so it sits right below the hero */
 .content { padding-top: 1rem; }  /* was 2rem */
 
-
-
 /* === Social Icons in Sidebar === */
 .social {
   display: flex;
